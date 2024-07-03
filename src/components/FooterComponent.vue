@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import imgLogo from '../assets/images/fazztrack.svg'
+    import imgLogo from '../assets/images/kaleb-image.png'
 </script>
 
 <template>
@@ -8,50 +8,24 @@
         <div class="w-full flex flex-col lg:flex-row justify-between items-start gap-11 py-11 border-b-2">
           <div class="w-full lg:w-96 flex flex-col gap-7">
             <div>
-              <img :src="imgLogo" class="w-36" alt="" />
+              <img :src="imgLogo" class="w-[320px]" alt="" />
             </div>
             <div class="text-black">
-              Fazztrack adalah program pelatihan yang berkomitmen untuk mencetak
-              developer yang profesional dan memberikan kesempatan untuk
-              berkarir di perusahaan ternama.
+              Kaleb Furniture is a modern, dynamic, and flexible Indonesia Furniture Manufacturer Company that focuses on the International Market and was established in 2004 in Jakarta. It has an office in Jaya Building 9th Floor, JL. MH. Thamrin no 12, Menteng, Central Jakarta.
+
+We design and manufacture bespoke furniture projects for our clients with a focus on quality, innovative design, and impeccable delivery. Our key divisions of scope include retail, residential, corporate, commercial, and hospitality furniture.
             </div>
           </div>
-          <div class="w-full grid grid-cols-2 lg:grid-cols-4 gap-5">
-            <div class="w-40 text-black flex flex-col justify-start items-start gap-2">
-              <div class="font-semibold text-xl mb-3">Kelas</div>
-              <div>Flullstack Mobile</div>
-              <div>Fullstack Website dan Golang</div>
-              <div>Mini Bootcamp</div>
-              <div>Online Course</div>
-            </div>
-            <div class="w-40 text-black flex flex-col justify-start items-start gap-2">
-              <div class="font-semibold text-xl mb-3">Dukungan</div>
-              <div>Cicilan Setelah Kerja (ISA)</div>
-              <div>FAQ</div>
-              <div>Corporate Training</div>
-              <div>Hire Our Graduates</div>
-            </div>
-            <div class="w-40 text-black flex flex-col justify-start items-start gap-2">
-              <div class="font-semibold text-xl mb-3">Tentang</div>
-              <div>Cerita Alumni</div>
-              <div>Sekilas Fazztrack</div>
-            </div>
-            <div class="w-40 text-black flex flex-col justify-start items-start gap-2">
-              <div class="font-semibold text-xl mb-3">Social Media</div>
-              <div>Instagram</div>
-              <div>Facebook</div>
-              <div>Youtube</div>
-            </div>
-          </div>
+          
         </div>
-        <div class="py-8 w-full flex flex-col-reverse lg:flex-row justify-between items-center">
+        <div class="py-8 w-full flex flex-row justify-between lg:flex-row items-center">
           <div class="text-black w-full flex justify-start items-center">
-            <div class="font-semibold">© 2020 - 2023 Fazztrack.</div>
+            <div class="font-semibold">© 2020 - 2024 Kaleb.</div>
             <div>All Rights Reserved</div>
           </div>
           <div class="flex flex-col md:flex-row justify-end items-start text-black lg:gap-5 w-full pb-2 md:pb-0">
             <div>+6281132010888</div>
-            <div>hello@fazztrack.com</div>
+            <div>hello@kaleb.com</div>
           </div>
         </div>
       </div>

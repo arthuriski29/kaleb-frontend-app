@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import LoginView from '@/views/auth/LoginView.vue'
 import RegisterView from '@/views/auth/RegisterView.vue'
+// import { jwtDecode } from 'jwt-decode'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BACKEND_URL),
@@ -9,7 +10,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: { requiredAuth: true }
     },
     {
       path: '/auth/login',
@@ -21,15 +23,25 @@ const router = createRouter({
       name: 'register',
       component: RegisterView
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue')
-    // }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  const token = localStorage.getItem('token')
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (!token) {
+      next('/auth/login')
+    } else {
+      try {
+        next()
+      } catch (error) {
+        localStorage.removeItem('token')
+        next('/auth/login')
+      }
+    }
+  } else {
+    next()
+  }
 })
 
 export default router
